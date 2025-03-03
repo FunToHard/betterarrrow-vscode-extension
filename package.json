@@ -1,0 +1,57 @@
+{
+  "name": "betterarrow",
+  "displayName": "BetterArrow",
+  "description": "j as \"left arrow\" k as \"up arrow\" l as \"down arrow\" and ; as \"right arrow\" while holding alt",
+  "version": "0.0.1",
+  "publisher": "funtohard",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [],
+    "keybindings": [
+      {
+        "key": "alt+j",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "alt+k",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "alt+l",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "alt+;",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.97.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "eslint": "^9.21.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "typescript": "^5.1.0"
+  }
+}
