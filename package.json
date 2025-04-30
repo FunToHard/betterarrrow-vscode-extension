@@ -2,7 +2,7 @@
   "name": "betterarrow",
   "displayName": "BetterArrow",
   "description": "j as \"left arrow\" k as \"up arrow\" l as \"down arrow\" and ; as \"right arrow\" while holding alt",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "funtohard",
   "engines": {
     "vscode": "^1.97.0"
@@ -35,6 +35,16 @@
       {
         "key": "alt+;",
         "command": "cursorRight",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "alt+h",
+        "command": "cursorHome",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "alt+'",
+        "command": "cursorEnd",
         "when": "editorTextFocus"
       }
     ]
